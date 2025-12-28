@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
-import { Toaster } from "react-hot-toast";
+// import { Toaster } from "react-hot-toast";
 import css from "./NotesPage.module.css";
 import type { NoteTag } from "@/types/note";
 
@@ -32,16 +32,16 @@ export default function NotesClient({ tag }: NotesClientProps) {
     placeholderData: keepPreviousData,
   });
 
-  const hendleSubmit = (value: string) => {
+  const handleSubmit = (value: string) => {
     setSearchTerm(value);
     setCurrentPage(1);
   };
 
   return (
     <div className={css.app}>
-      <Toaster position="top-center" />
+      {/* <Toaster position="top-center" /> */}
       <header className={css.toolbar}>
-        <SearchBox value={searchTerm} onChange={hendleSubmit} />
+        <SearchBox value={searchTerm} onChange={handleSubmit} />
         {data && data.totalPages > 1 && (
           <Pagination
             totalPages={data.totalPages}

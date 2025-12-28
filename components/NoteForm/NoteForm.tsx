@@ -2,7 +2,7 @@
 // import { Formik, Form, Field, ErrorMessage } from "formik";
 // import type { FormikHelpers } from "formik";
 import type { NoteFormValues } from "../../types/note";
-import * as Yup from "yup";
+// import * as Yup from "yup";
 import css from "./NoteForm.module.css";
 import { useRouter } from "next/navigation";
 import { useMutation } from "@tanstack/react-query";
@@ -20,16 +20,16 @@ import { useNoteDraft } from "@/lib/store/noteStore";
 //   tag: "Todo",
 // };
 
-const NoteFormSchema = Yup.object().shape({
-  title: Yup.string()
-    .min(3, "Title must be at least 3 characters")
-    .max(50, "Title is too long")
-    .required("Title is required"),
-  content: Yup.string().max(500, "Content is too long"),
-  tag: Yup.string()
-    .oneOf(["Todo", "Work", "Personal", "Meeting", "Shopping"], "Invalid tag")
-    .required("Select tag"),
-});
+// const NoteFormSchema = Yup.object().shape({
+//   title: Yup.string()
+//     .min(3, "Title must be at least 3 characters")
+//     .max(50, "Title is too long")
+//     .required("Title is required"),
+//   content: Yup.string().max(500, "Content is too long"),
+//   tag: Yup.string()
+//     .oneOf(["Todo", "Work", "Personal", "Meeting", "Shopping"], "Invalid tag")
+//     .required("Select tag"),
+// });
 
 export default function NoteForm() {
   const router = useRouter();

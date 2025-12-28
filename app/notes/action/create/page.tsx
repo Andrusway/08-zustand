@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import css from "./CreateNote.module.css";
 import NoteForm from "@/components/NoteForm/NoteForm";
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: "Create Note",
   description: "Here you can create new note",
   openGraph: {
